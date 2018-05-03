@@ -1,13 +1,13 @@
 // Custom site settings
-var title_setting = "OpenLocalMap - Sant Joan de Viltorrada i Sant Martí de Torruella";
+var name_setting = "Sant Joan de Vilatorrada i Sant Martí de Torruella";
 var url_setting = "https://osm-catalan.github.io/openlocalmap";
-var view_setting = { coord: [41.7632, 1.8038], zoom: 13};
+var view_setting = { coord: [41.7632, 1.8038], zoom: 15};
 var nominatim_setting = [1.68434, 41.23761, 1.76502, 41.20533];
 var notes_setting ="https://www.openstreetmap.org/#map=9/41.5446/2.0132&layers=N";
 var wikipedia_setting = "https://ca.m.wikipedia.org/w/index.php?title=Categoria:Sant_Joan_de_Vilatorrada&mobileaction=toggle_view_mobile";
 var default_lang = "ca";
 
-document.title = title_setting;
+document.title = 'OpenLocalMap - ' + name_setting;
 
 // spinner
 var spinner = 0;
@@ -164,10 +164,10 @@ L.control.locate({
     strings: {
 	title: 'Mostra la meva ubicació',
 	popup: 'Esteu a {distance} metres d\'aquí aproximadament',
-	outsideMapBoundsMsg: 'No es posible ubicar tu posición en el mapa'
+	outsideMapBoundsMsg: 'No és possible ubicar la vostra posició al mapa'
     },
     onLocationError: function(err) {
-	alert('S\'ha produït un error en intentar loacalitzar la vostra ubicació.');
+	alert('S\'ha produït un error en intentar localitzar la vostra ubicació.');
     }
 }).addTo(map);
 
