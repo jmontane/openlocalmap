@@ -1,7 +1,7 @@
 // Custom site settings
 var title_setting = "OpenLocalMap - Sant Joan de Viltorrada i Sant Martí de Torruella";
 var url_setting = "https://osm-catalan.github.io/openlocalmap";
-var view_setting = { coord: [41.2214, 1.7169], zoom: 15};
+var view_setting = { coord: [41.7632, 1.8038], zoom: 13};
 var nominatim_setting = [1.68434, 41.23761, 1.76502, 41.20533];
 var notes_setting ="https://www.openstreetmap.org/#map=9/41.5446/2.0132&layers=N";
 var wikipedia_setting = "https://ca.m.wikipedia.org/w/index.php?title=Categoria:Sant_Joan_de_Vilatorrada&mobileaction=toggle_view_mobile";
@@ -25,43 +25,43 @@ var attribution = 'Dades &#169; Col·laboradors <a href="http://openstreetmap.or
 var tileLayerData = {
     std: {
 	name: 'Estàndard (Mapnik)',
-	url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	zoom: '19'
     },
     hot: {
 	name: 'Equip Humanitari',
-	url: 'http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+	url: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
 	attribution: 'Tessel·les <a href="http://hot.openstreetmap.org/" target="_blank">Equip Humanitari OpenStreetMap</a>',
 	zoom: '20'
     },
     osmfr: {
 	name: 'OSM França',
-	url: 'http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
+	url: 'https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
 	attribution: 'Tessel·les <a href="http://openstreetmap.fr/" target="_blank">OpenStreetMap França</a>',
 	zoom: '20'
     },
     cycle: {
 	name: 'Bicicleta',
-	url: 'http://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png' + apikey,
+	url: 'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png' + apikey,
 	attribution: 'Tessel·les <a href="http://thunderforest.com/opencyclemap/" target="_blank">ThunderForest</a>',
 	zoom: '18'
     },
     transport: {
 	name: 'Transport públic',
-	url: 'http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png' + apikey,
+	url: 'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png' + apikey,
 	attribution: 'Tessel·les <a href="http://thunderforest.com/transport/" target="_blank">ThunderForest</a>',
 	zoom: '20'
     },
     landscape: {
 	name: 'Paisatge',
-	url: 'http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png' + apikey,
+	url: 'https://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png' + apikey,
 	attribution: 'Tessel·les <a href="http://thunderforest.com/landscape/" target="_blank">ThunderForest</a>',
 	zoom: '18'
     },
     outdoor: {
 	name: 'A l\'aire lliure',
-	url: 'http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png' + apikey,
-	attribution: 'Tessel·les <a href="http://thunderforest.com/outdoors/" target="_blank">ThunderForest</a>',
+	url: 'https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png' + apikey,
+	attribution: 'Tessel·les <a href="https://thunderforest.com/outdoors/" target="_blank">ThunderForest</a>',
 	zoom: '18'
     },
 //    lyrk: {
@@ -78,26 +78,26 @@ var tileLayerData = {
     },
     mapquest: {
 	name: 'MapQuest Open',
-	url: 'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+	url: 'https://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
 	attribution: 'Tessel·les <a href="http://mapquest.com/" target="_blank">MapQuest</a>',
 	subdomains: '123',
 	zoom: '18'
     },
     mapsurfer: {
 	name: 'OpenMapSurfer (3D)',
-	url: 'http://openmapsurfer.uni-hd.de/tiles/roads/x={x}&y={y}&z={z}',
+	url: 'https://openmapsurfer.uni-hd.de/tiles/roads/x={x}&y={y}&z={z}',
 	attribution: 'Tessel·les <a href="http://giscience.uni-hd.de/" target="_blank">GIScience Research Group @ Heidelberg University</a>',
 	zoom: '19'
     },
     toner: {
 	name: 'Tòner',
-	url: 'http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png',
+	url: 'https://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png',
 	attribution: 'Tessel·les d\'<a href="http://stamen.com" target="_blank">Stamen Design</a>',
 	zoom: '20'
     },
     watercolor: {
 	name: 'Aquarel·la',
-	url: 'http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png',
+	url: 'https://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png',
 	attribution: 'Tessel·les d\'<a href="http://stamen.com" target="_blank">Stamen Design</a>',
 	zoom: '16'
     }
@@ -123,7 +123,7 @@ tileLayers['Estàndard (Mapnik)'].addTo(map);
 L.control.layers(tileLayers).addTo(map);
 // +++++ Set the coordinates for zoomhouse +++++
 // ++++++++MODIFICAR AQUÍ++++++++++++++
-map.setView([41.2214 , 1.7169], 15);
+map.setView([view_setting.coord[0] ,view_setting.coord[1]], view_setting.zoom);
 var zoomHome = L.Control.zoomHome();
 zoomHome.addTo(map);
 var notesLayer = new leafletOsmNotes();
