@@ -184,7 +184,7 @@ map.addControl(loadingControl);
 if (!map.restoreView()) {
 // +++++ Coordinates (lat,lon) for local place +++++
 //+++++++++ MODIFICAR AQUÍ ++++++++++++
-    map.setView([41.2214 , 1.7169], 15);
+    map.setView([view_setting.coord[0] , view_setting.coord[0]], view_setting.zoom);
 }
 
 var query = '';
@@ -290,7 +290,7 @@ function chooseAddr2(lat1, lng1, lat2, lng2, osm_type) {
 function addr_search2() {
     var inp = document.getElementById("addr2");
 
-    $.getJSON('http://nominatim.openstreetmap.org/search?format=json&limit=10&q=' + inp.value, function(data) {
+    $.getJSON('https://nominatim.openstreetmap.org/search?format=json&limit=10&q=' + inp.value, function(data) {
         var items = [];
 
         $.each(data, function(key, val) {
@@ -345,8 +345,8 @@ function refreshMapillary() {
  $.ajax({
  
     dataType: "json",
-    url: "http://api.mapillary.com/v1/im/search?",
-             url: "http://api.mapillary.com/v1/im/search?",
+    url: "https://api.mapillary.com/v1/im/search?",
+             url: "https://api.mapillary.com/v1/im/search?",
             data: {
                 'max-results': 10,
                 'geojson': true,
