@@ -7,6 +7,8 @@ var notes_setting ="https://www.openstreetmap.org/#map=9/41.5446/2.0132&layers=N
 var wikipedia_setting = "https://ca.m.wikipedia.org/w/index.php?title=Categoria:Sant_Joan_de_Vilatorrada&mobileaction=toggle_view_mobile";
 var default_lang = "ca";
 
+document.title = title_setting;
+
 // spinner
 var spinner = 0;
 
