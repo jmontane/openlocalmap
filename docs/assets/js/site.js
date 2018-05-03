@@ -2,7 +2,7 @@
 var name_setting = "Sant Joan de Vilatorrada i Sant Martí de Torruella";
 var url_setting = "https://osm-catalan.github.io/openlocalmap";
 var view_setting = { coord: [41.7435, 1.8052], zoom: 15};
-var nominatim_setting = [1.68434, 41.23761, 1.76502, 41.20533];
+var nominatim_setting = '1.68434,41.23761,1.76502,41.20533';
 var notes_setting ="https://www.openstreetmap.org/#map=9/41.5446/2.0132&layers=N";
 var wikipedia_setting = "https://ca.m.wikipedia.org/w/index.php?title=Categoria:Sant_Joan_de_Vilatorrada&mobileaction=toggle_view_mobile";
 var default_lang = "ca";
@@ -240,7 +240,7 @@ function addr_search() {
 
 // +++++ &viewbox=1.9341,41.4200,1.9886,41.3993&bounded=1 --> Coordinates (lat,long) for search box +++++
 // +++++++++ MODIFICAR AQUÍ +++++++++++
-    $.getJSON('https://nominatim.openstreetmap.org/search?format=json&viewbox=1.68434,41.23761,1.76502,41.20533&bounded=1&limit=5&q=' + inp.value, function(data) {
+    $.getJSON('https://nominatim.openstreetmap.org/search?format=json&viewbox='+nominatim_setting+'&bounded=1&limit=5&q=' + inp.value, function(data) {
         var items = [];
 
         $.each(data, function(key, val) {
