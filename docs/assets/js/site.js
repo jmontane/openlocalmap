@@ -125,7 +125,7 @@ L.control.layers(tileLayers).addTo(map);
 // ++++++++MODIFICAR AQUÍ++++++++++++++
 map.setView([view_setting.coord[0] ,view_setting.coord[1]], view_setting.zoom);
 var zoomHome = L.Control.zoomHome();
-zoomHome.zoomHomeTitle = 'Torna a '+ name_setting;
+zoomHome.options.zoomHomeTitle = 'Torna a '+ name_setting;
 zoomHome.addTo(map);
 var notesLayer = new leafletOsmNotes();
 
