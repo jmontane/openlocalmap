@@ -2,7 +2,8 @@
 var name_setting = "Sant Joan de Vilatorrada i Sant Martí de Torruella";
 var url_setting = "https://osm-catalan.github.io/openlocalmap";
 var view_setting = { coord: [41.7435, 1.8052], zoom: 15};
-var nominatim_setting = '1.68434,41.23761,1.76502,41.20533';
+var nominatim_setting = '1.7487,41.7237,1.8335,41.7821';
+
 var notes_setting ="https://www.openstreetmap.org/#map=9/41.5446/2.0132&layers=N";
 var wikipedia_setting = "https://ca.m.wikipedia.org/w/index.php?title=Categoria:Sant_Joan_de_Vilatorrada&mobileaction=toggle_view_mobile";
 var default_lang = "ca";
