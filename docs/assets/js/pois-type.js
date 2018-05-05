@@ -89,7 +89,7 @@ var pois = {
     },
 
     bus_station: {
-	name: 'Terminal d\'omnibus',
+	name: 'Terminal de bus',
 	query: '[amenity=bus_station]',
 	iconName: 'bus'
     },
@@ -204,7 +204,7 @@ var pois = {
     },
 
     video: {
-	name: 'Vídeoclub',
+	name: 'Videoclub',
 	query: '[shop=video]',
 	iconName: 'movierental'
     },
@@ -227,11 +227,11 @@ var pois = {
 	iconName: 'computers'
     },
 
-//    butcher: {
-//	name: 'Carniceria',
-//	query: '[shop=butcher]',
-//	iconName: 'butcher-2'
-//    },
+    butcher: {
+	name: 'Carnisseria',
+	query: '[shop=butcher]',
+	iconName: 'butcher-2'
+    },
 
     doityourself: {
 	name: 'Bricolatge',
@@ -259,7 +259,7 @@ var pois = {
     },
 
     window_construction: {
-	name: 'Al·lumini',
+	name: 'Alumini',
 	query: '[craft=window_construction]',
 	iconName: 'glazer'
     },
